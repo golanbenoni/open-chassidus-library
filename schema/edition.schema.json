@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chassid.ai/schema/edition-v1.json",
+  "title": "Open Chassidus Library edition record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "work_id", "edition_id", "title", "language", "source", "rights", "content_checksum", "segments"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "work_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "edition_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type": "string", "minLength": 1},
+    "publication_year": {"type": ["integer", "null"], "minimum": 1},
+    "language": {"type": "string", "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "reference", "accessed_on", "source_checksum", "transcription_method", "transcriber"],
+      "properties": {
+        "kind": {"enum": ["public_scan", "owned_copy", "licensed_digital_source"]},
+        "reference": {"type": "string", "minLength": 1},
+        "accessed_on": {"type": "string", "format": "date"},
+        "source_checksum": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+        "transcription_method": {"enum": ["manual", "ocr_human_reviewed", "publisher_text"]},
+        "transcriber": {"type": "string", "minLength": 1}
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["basis", "evidence", "reviewed_on", "reviewer"],
+      "properties": {
+        "basis": {"enum": ["public_domain", "written_permission", "open_license"]},
+        "evidence": {"type": "string", "minLength": 1},
+        "license": {"type": ["string", "null"]},
+        "reviewed_on": {"type": "string", "format": "date"},
+        "reviewer": {"type": "string", "minLength": 1}
+      }
+    },
+    "content_checksum": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "segments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "reference", "text"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9]+(?:[./-][a-z0-9]+)*$"},
+          "reference": {"type": "string", "minLength": 1},
+          "text": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Open Chassidus Library
 
-This repository contains the public library site and its source-first corpus tools. The project is in a source and rights review phase. The catalog currently lists three pilot candidates; it does not yet publish text editions or downloads.
+This repository contains the public library site and its source-first corpus tools. The project is in a source and rights review phase. The catalog currently lists three pilot candidates; it does not yet publish text editions or downloads. The preview is hosted at `https://open-chassidus-library.pages.dev` while the custom domain is being connected.
 
 ## Product rules
 
@@ -11,7 +11,7 @@ This repository contains the public library site and its source-first corpus too
 
 ## Development
 
-This is a dependency-free static site. Run `node scripts/build.mjs` to copy `src/` into `dist/` for Cloudflare hosting. The site currently presents the project, release rules, and pilot catalog; a reader and downloads will appear only after an edition passes source and rights review.
+This is a dependency-free static site. Run `node scripts/build.mjs` to copy `src/` into `dist/` for Cloudflare Pages. The site currently presents the project, release rules, and pilot catalog; a reader and downloads will appear only after an edition passes source and rights review.
 
 ## Licensing
 
