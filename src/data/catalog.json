@@ -1,0 +1,42 @@
+{
+  "catalog_version": "0.1.0",
+  "corpus_release": null,
+  "works": [
+    {
+      "id": "tanya",
+      "title": "Tanya",
+      "title_he": "תניא",
+      "alternate_titles": ["Likutei Amarim"],
+      "author": "Rabbi Shneur Zalman of Liadi",
+      "composition_period": "Late 18th century",
+      "language": ["Hebrew"],
+      "tier": "A candidate",
+      "status": "source-review",
+      "note": "Pilot candidate. No edition has been approved for release yet."
+    },
+    {
+      "id": "torah-or",
+      "title": "Torah Or",
+      "title_he": "תורה אור",
+      "alternate_titles": [],
+      "author": "Rabbi Shneur Zalman of Liadi",
+      "composition_period": "Early 19th century",
+      "language": ["Hebrew"],
+      "tier": "A candidate",
+      "status": "source-review",
+      "note": "Pilot candidate. No edition has been approved for release yet."
+    },
+    {
+      "id": "likkutei-torah",
+      "title": "Likkutei Torah",
+      "title_he": "לקוטי תורה",
+      "alternate_titles": [],
+      "author": "Rabbi Shneur Zalman of Liadi",
+      "composition_period": "Early 19th century",
+      "language": ["Hebrew"],
+      "tier": "A candidate",
+      "status": "source-review",
+      "note": "Pilot candidate. No edition has been approved for release yet."
+    }
+  ]
+}
