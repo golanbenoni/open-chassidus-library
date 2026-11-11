@@ -13,6 +13,10 @@ This repository contains the public library site and its source-first corpus too
 
 This is a dependency-free static site. Run `node scripts/build.mjs` to copy `src/` into `dist/` for Cloudflare Pages. The site currently presents the project, release rules, and pilot catalog; a reader and downloads will appear only after an edition passes source and rights review.
 
+## Cloudflare deployment
+
+The initial public preview uses a Cloudflare Pages Direct Upload project. The manual `Deploy to Cloudflare Pages` GitHub Actions workflow builds the static output and deploys it to that project. Before dispatching it, configure repository secrets `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` with a token that has Cloudflare Pages edit access. The custom domain `chassid.ai` still needs to be attached to the Pages project.
+
 ## Licensing
 
 The platform code license is pending owner selection. Corpus editions will carry their own rights records; no blanket text license is implied by this repository.
