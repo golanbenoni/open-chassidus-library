@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f1e8" />
+    <meta name="description" content="Read Tanya in Hebrew or English with complete edition records and passage citations." />
+    <title>Tanya · Open Chassidus Library</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/reader.js"></script>
+  </head>
+  <body class="reader-page">
+    <a class="skip-link" href="#reader-main">Skip to text</a>
+    <header class="topbar">
+      <a class="brand" href="/#top" aria-label="Open Chassidus Library home">
+        <span class="brand-mark" aria-hidden="true">ע</span>
+        <span class="brand-name">Open Chassidus<br /><em>Library</em></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/#library">Library</a>
+        <a href="/#principles">Principles</a>
+      </nav>
+      <a class="top-link" href="/#library">← All works</a>
+    </header>
+
+    <main id="reader-main" class="reader-main">
+      <a class="reader-back" href="/#library">← Back to the library</a>
+      <div class="reader-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Source-documented beta</p>
+          <h1 id="work-title">Tanya</h1>
+          <p class="reader-subtitle"><span lang="he" dir="rtl">תניא</span> · Rabbi Shneur Zalman of Liadi</p>
+        </div>
+        <div class="reader-download">
+          <a id="download-edition" class="button button-dark" href="#" download>Download this edition <span aria-hidden="true">↓</span></a>
+          <a id="edition-source" class="text-link" href="https://www.sefaria.org/Tanya" target="_blank" rel="noopener noreferrer">Edition source ↗</a>
+        </div>
+      </div>
+
+      <div class="reader-edition-panel">
+        <div>
+          <span class="control-label">Edition</span>
+          <div class="edition-switch" role="group" aria-label="Choose text edition">
+            <button class="edition-button" type="button" data-language="en" aria-pressed="true">English</button>
+            <button class="edition-button" type="button" data-language="he" aria-pressed="false">עברית · Hebrew</button>
+          </div>
+        </div>
+        <div class="edition-record" aria-live="polite">
+          <p id="edition-title">Loading edition…</p>
+          <p id="edition-license"></p>
+          <p id="edition-credit"></p>
+        </div>
+      </div>
+
+      <div class="reader-view-actions">
+        <button id="compare-toggle" type="button" aria-pressed="false">Compare Hebrew and English</button>
+        <button id="print-text" type="button">Print section</button>
+      </div>
+
+      <section class="reader-toolbar" aria-label="Text navigation and search">
+        <label class="reader-select-label" for="section-select">
+          <span class="control-label">Section</span>
+          <select id="section-select" disabled><option>Loading sections…</option></select>
+        </label>
+        <div class="section-arrows" aria-label="Move between sections">
+          <button id="previous-section" type="button" disabled>← Previous</button>
+          <button id="next-section" type="button" disabled>Next →</button>
+        </div>
+        <label class="reader-search" for="text-search">
+          <span class="control-label">Search this edition</span>
+          <input id="text-search" type="search" placeholder="Search Hebrew or English text" autocomplete="off" />
+        </label>
+      </section>
+
+      <p id="reader-status" class="reader-status" role="status" aria-live="polite">Loading Tanya…</p>
+      <div id="reader-content" class="reader-content" aria-live="polite"></div>
+      <p class="reader-footnote">Every passage citation opens the corresponding location in Sefaria. The complete edition record is available as a JSON download.</p>
+    </main>
+
+    <footer class="footer">
+      <a class="brand footer-brand" href="/#top"><span class="brand-mark" aria-hidden="true">ע</span><span class="brand-name">Open Chassidus<br /><em>Library</em></span></a>
+      <p>Free to read. Built from documented sources.</p>
+      <div class="footer-links"><a href="/#principles">Source policy</a><a href="/#release">Release status</a><a href="/data/manifest.json">Corpus manifest</a><a href="https://github.com/golanbenoni/open-chassidus-library" rel="noopener noreferrer">Source code ↗</a></div>
+    </footer>
+  </body>
+</html>

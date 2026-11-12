@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "corpus_release": "0.1.0-beta",
+  "generated_on": "2026-11-12",
+  "status": "beta",
+  "quality_status": "Independent human text collation is in progress.",
+  "works": [
+    {
+      "work_id": "tanya",
+      "title": "Tanya",
+      "title_he": "תניא",
+      "author": "Rabbi Shneur Zalman of Liadi",
+      "editions": [
+        {
+          "edition_id": "kehot-hebrew",
+          "title": "Tanya — Kehot Publication Society (Hebrew)",
+          "language": "he",
+          "file": "/data/editions/tanya-kehot-hebrew.json",
+          "version_title": "Kehot Publication Society",
+          "version_source": "http://kehot.com",
+          "source_reference": "https://www.sefaria.org/api/v3/texts/Tanya,%20Part%20I;%20Likkutei%20Amarim,%20Title%20Page?version=hebrew%7CKehot%20Publication%20Society",
+          "publication_year": null,
+          "accessed_on": "2026-11-12",
+          "source_license": "CC-BY-NC",
+          "rights_basis": "open_license",
+          "rights_reviewed_on": "2026-11-11",
+          "transcriber": "Sefaria API import via scripts/import-tanya.mjs",
+          "source_checksum": "sha256:ebc615bd58cfb5a5cb6ebc5b74b3864f182dbc7c899c950f694e63bfc9c36509",
+          "content_checksum": "sha256:a59ac53c38f14296bc6055814acdaee773cca7dedf93fb838577adf56a1b0bb5",
+          "section_count": 124,
+          "segment_count": 1623,
+          "status": "beta"
+        },
+        {
+          "edition_id": "kehot-english",
+          "title": "Tanya — Kehot Publication Society (English)",
+          "language": "en",
+          "file": "/data/editions/tanya-kehot-english.json",
+          "version_title": "Kehot Publication Society (English Translation)",
+          "version_source": "http://kehot.com",
+          "source_reference": "https://www.sefaria.org/api/v3/texts/Tanya,%20Part%20I;%20Likkutei%20Amarim,%20Title%20Page?version=english%7CKehot%20Publication%20Society%20(English%20Translation)",
+          "publication_year": null,
+          "accessed_on": "2026-11-12",
+          "source_license": "CC-BY-NC",
+          "rights_basis": "open_license",
+          "rights_reviewed_on": "2026-11-11",
+          "transcriber": "Sefaria API import via scripts/import-tanya.mjs",
+          "source_checksum": "sha256:094b89e7343d591ba86787b7db03bffc432ea0193af37dab41da30eafd114320",
+          "content_checksum": "sha256:d42eafd16b1d4648ce4194196d26a323dd174c309546df2fbd6dc08d0aa0e9d8",
+          "section_count": 124,
+          "segment_count": 1623,
+          "status": "beta"
+        }
+      ]
+    }
+  ]
+}

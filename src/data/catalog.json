@@ -1,6 +1,7 @@
 {
-  "catalog_version": "0.1.0",
-  "corpus_release": null,
+  "catalog_version": "0.2.0",
+  "corpus_release": "0.1.0-beta",
+  "release_date": "2026-11-12",
   "works": [
     {
       "id": "tanya",
@@ -9,10 +10,25 @@
       "alternate_titles": ["Likutei Amarim"],
       "author": "Rabbi Shneur Zalman of Liadi",
       "composition_period": "Late 18th century",
-      "language": ["Hebrew"],
-      "tier": "A candidate",
-      "status": "source-review",
-      "note": "Pilot candidate. No edition has been approved for release yet."
+      "language": ["Hebrew", "English"],
+      "tier": "Tier A work · rights-cleared digital editions",
+      "status": "beta",
+      "note": "Complete Hebrew and English editions are available: 124 sections and 1,623 cited text segments each. Independent text collation is still in progress.",
+      "reader": "/reader.html?work=tanya",
+      "editions": [
+        {
+          "id": "kehot-hebrew",
+          "label": "Kehot · Hebrew",
+          "language": "Hebrew",
+          "file": "/data/editions/tanya-kehot-hebrew.json"
+        },
+        {
+          "id": "kehot-english",
+          "label": "Kehot · English",
+          "language": "English",
+          "file": "/data/editions/tanya-kehot-english.json"
+        }
+      ]
     },
     {
       "id": "torah-or",

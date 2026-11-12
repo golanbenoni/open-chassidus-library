@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f4f1e8" />
-    <meta name="description" content="A free, source-documented library for reading and preserving Chassidus texts." />
+    <meta name="description" content="Read and download Tanya in Hebrew and English, with edition sources and passage citations attached." />
     <meta property="og:title" content="Open Chassidus Library" />
     <meta property="og:description" content="Study the texts. Keep the sources attached." />
     <title>Open Chassidus Library</title>
@@ -30,11 +30,11 @@
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> A public library in preparation</p>
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A public reading beta</p>
           <h1 id="hero-title">Study the texts.<br /><span>Keep the sources.</span></h1>
-          <p class="hero-intro">A free, carefully documented home for Chassidus texts. Every edition will carry its source, history, and a citation you can follow.</p>
+          <p class="hero-intro">Read and download Tanya in Hebrew and English. Each edition carries its source, rights record, and passage citations; more works will follow as they are prepared.</p>
           <div class="hero-actions">
-            <a class="button button-dark" href="#library">Browse the pilot catalog <span aria-hidden="true">↘</span></a>
+            <a class="button button-dark" href="/reader.html?work=tanya">Read Tanya <span aria-hidden="true">↘</span></a>
             <a class="text-link" href="#principles">How the library is built <span aria-hidden="true">→</span></a>
           </div>
           <div class="hero-footnote"><span class="footnote-rule"></span><span>No account. No paywall. No text released without its source record.</span></div>
@@ -55,10 +55,10 @@
           <span class="art-caption">A library built to be checked.</span>
         </div>
         <div class="hero-stats" aria-label="Project status">
-          <div><strong id="candidate-count">3</strong><span>pilot candidates</span></div>
-          <div><strong>0</strong><span>editions cleared</span></div>
-          <div><strong>0</strong><span>texts released</span></div>
-          <p>We will publish a text only after its edition and rights record are ready.</p>
+          <div><strong id="candidate-count">3</strong><span>pilot works</span></div>
+          <div><strong id="edition-count">2</strong><span>editions online</span></div>
+          <div><strong id="released-count">1</strong><span>work in beta</span></div>
+          <p>Every released passage links to its source edition and stable citation.</p>
         </div>
       </section>
 
@@ -68,7 +68,7 @@
             <p class="eyebrow">The pilot catalog <span class="section-number">01 / 03</span></p>
             <h2 id="library-title">First, the source.</h2>
           </div>
-          <p class="section-lede">These works are being assessed for the first corpus. A listing here marks a research candidate, not a released or rights-cleared edition.</p>
+          <p class="section-lede">Tanya is available in two complete editions. Torah Or and Likkutei Torah remain in the preparation queue.</p>
         </div>
         <div class="catalog-tools">
           <label class="search-box" for="catalog-search">
@@ -85,7 +85,7 @@
         </div>
         <div class="catalog-notice">
           <span class="notice-icon" aria-hidden="true">i</span>
-          <p><strong>Not yet a reading edition.</strong> The pilot list is a work queue. Text, translations, and downloads will appear only after edition-specific source and rights review.</p>
+          <p><strong>Beta text, source attached.</strong> The Tanya editions include 124 sections, stable passage citations, source and license records, and full JSON downloads. Independent text collation remains in progress.</p>
         </div>
       </section>
 
@@ -105,29 +105,29 @@
           <article class="principle-row"><span class="principle-index">05</span><h3>Changes are visible</h3><p>Corrections and edition changes are reviewed, dated, and preserved in version history.</p><span class="principle-mark">↗</span></article>
           <article class="principle-row"><span class="principle-index">06</span><h3>Built to outlast one host</h3><p>Versioned downloads and mirrors will make the collection independently preservable.</p><span class="principle-mark">↗</span></article>
         </div>
-        <p class="principles-note">The first release focuses on verified Tier A public-domain editions. Works needing permission or further review stay out of the corpus until cleared.</p>
+        <p class="principles-note">Each edition is identified separately, with its source, version title, license metadata, rights review, and checksum. The corpus does not treat one edition's rights as applying to every edition of a work.</p>
       </section>
 
       <section class="release-section section" id="release" aria-labelledby="release-title">
         <div class="release-intro">
           <p class="eyebrow">A staged opening <span class="section-number">03 / 03</span></p>
           <h2 id="release-title">Build it in the open.<br /><em>Release it with care.</em></h2>
-          <p>The published launch dates are being reset around source review and transcription readiness. The work moves forward in clear, verifiable steps.</p>
+          <p>The public beta begins with a source-documented Tanya reader and complete edition downloads. Human collation and additional works are the next steps.</p>
         </div>
         <div class="release-steps">
           <article class="release-step is-current">
-            <span class="step-status">Current</span><span class="step-number">01</span>
-            <div><h3>Document the source</h3><p>Find and review eligible editions; record provenance and rights before transcription is released.</p></div>
+            <span class="step-status">Done</span><span class="step-number">01</span>
+            <div><h3>Document the source</h3><p>Tanya's Hebrew and English editions have source, license, rights, and coverage records.</p></div>
             <span class="step-arrow" aria-hidden="true">↗</span>
           </article>
           <article class="release-step">
-            <span class="step-status">Next</span><span class="step-number">02</span>
-            <div><h3>Open the reading room</h3><p>Publish the first verified texts with stable citations and downloadable source records.</p></div>
+            <span class="step-status">Current</span><span class="step-number">02</span>
+            <div><h3>Review and extend the reading room</h3><p>Complete human collation, gather reader corrections, and prepare Torah Or and Likkutei Torah.</p></div>
             <span class="step-arrow" aria-hidden="true">↗</span>
           </article>
           <article class="release-step">
             <span class="step-status">V1</span><span class="step-number">03</span>
-            <div><h3>Make it portable</h3><p>Add read-only REST and MCP access, bulk export, and independent mirrors.</p></div>
+            <div><h3>Make it portable</h3><p>Add read-only REST and MCP access, signed bulk exports, and independent mirrors.</p></div>
             <span class="step-arrow" aria-hidden="true">↗</span>
           </article>
         </div>
@@ -143,7 +143,7 @@
     <footer class="footer">
       <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">ע</span><span class="brand-name">Open Chassidus<br /><em>Library</em></span></a>
       <p>Free to read. Built from documented sources.</p>
-      <div class="footer-links"><a href="#principles">Source policy</a><a href="#release">Release status</a><a href="https://github.com/golanbenoni/open-chassidus-library" rel="noopener noreferrer">Source code ↗</a><span>© 2026 Open Chassidus Library</span></div>
+      <div class="footer-links"><a href="#principles">Source policy</a><a href="#release">Release status</a><a href="/data/manifest.json">Corpus manifest</a><a href="https://github.com/golanbenoni/open-chassidus-library" rel="noopener noreferrer">Source code ↗</a><span>© 2026 Open Chassidus Library</span></div>
     </footer>
     <noscript><p class="noscript">Enable JavaScript to browse the pilot catalog.</p></noscript>
   </body>

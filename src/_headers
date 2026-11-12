@@ -11,5 +11,8 @@
 /app.js
   Cache-Control: public, max-age=3600
 
+/reader.js
+  Cache-Control: public, max-age=3600
+
 /data/*
   Cache-Control: public, max-age=300

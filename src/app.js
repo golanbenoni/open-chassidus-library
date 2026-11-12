@@ -4,6 +4,8 @@ const count = document.querySelector("#catalog-count");
 const empty = document.querySelector("#empty-state");
 const clearButton = document.querySelector("#clear-search");
 const candidateCount = document.querySelector("#candidate-count");
+const editionCount = document.querySelector("#edition-count");
+const releasedCount = document.querySelector("#released-count");
 
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -14,10 +16,20 @@ function render(works, query = "") {
   const matches = works.filter((work) => [work.title, work.title_he, work.author, ...work.alternate_titles]
     .join(" ").toLocaleLowerCase().includes(term));
 
-  grid.innerHTML = matches.map((work) => `
+  grid.innerHTML = matches.map((work) => {
+    const isAvailable = ["beta", "released"].includes(work.status);
+    const actions = isAvailable ? `
+      <div class="work-actions">
+        <a class="work-read-link" href="${escapeHtml(work.reader)}">Read ${escapeHtml(work.title)} <span aria-hidden="true">→</span></a>
+        <div class="work-downloads">${work.editions.map((edition) => `
+          <a href="${escapeHtml(edition.file)}" download>Download ${escapeHtml(edition.language)} JSON</a>`).join("")}
+        </div>
+      </div>` : "";
+
+    return `
     <article class="work-card">
       <div class="work-meta">
-        <span class="work-status">Source review</span>
+        <span class="work-status ${isAvailable ? "is-available" : ""}">${isAvailable ? "Public beta" : "Source review"}</span>
         <span class="work-id">catalog/${escapeHtml(work.id)}</span>
       </div>
       <div class="work-title-row">
@@ -26,9 +38,11 @@ function render(works, query = "") {
       </div>
       <p class="work-author">${escapeHtml(work.author)} · ${escapeHtml(work.composition_period)}</p>
       <p class="work-note">${escapeHtml(work.note)}</p>
-    </article>`).join("");
+      ${actions}
+    </article>`;
+  }).join("");
 
-  count.textContent = `${matches.length} of ${works.length} pilot candidates`;
+  count.textContent = `${matches.length} of ${works.length} pilot works`;
   empty.hidden = matches.length !== 0;
   grid.hidden = matches.length === 0;
 }
@@ -39,6 +53,8 @@ async function start() {
     if (!response.ok) throw new Error("Catalog could not be loaded");
     const catalog = await response.json();
     candidateCount.textContent = catalog.works.length;
+    editionCount.textContent = catalog.works.reduce((total, work) => total + (work.editions?.length || 0), 0);
+    releasedCount.textContent = catalog.works.filter((work) => ["beta", "released"].includes(work.status)).length;
     render(catalog.works);
     search.addEventListener("input", () => render(catalog.works, search.value));
     clearButton.addEventListener("click", () => {
