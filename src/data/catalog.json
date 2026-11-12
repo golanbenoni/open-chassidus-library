@@ -14,7 +14,7 @@
       "tier": "Tier A work · rights-cleared digital editions",
       "status": "beta",
       "note": "Complete Hebrew and English editions are available: 124 sections and 1,623 cited text segments each. Independent text collation is still in progress.",
-      "reader": "/reader.html?work=tanya",
+      "reader": "/reader?work=tanya",
       "editions": [
         {
           "id": "kehot-hebrew",
