@@ -16,6 +16,13 @@ This is a dependency-free static site. Run `node scripts/build.mjs` to copy `src
 
 The current beta contains 124 sections and 1,623 cited text segments in each edition. The reader supports whole-edition search, Hebrew/English side-by-side reading, section printing, stable local permalinks, and links each paragraph citation back to Sefaria. The catalog, public manifest, and downloadable edition files identify each source separately.
 
+## Current readiness
+
+- The public beta is deployed at `https://open-chassidus-library.pages.dev`.
+- Cloudflare has associated `chassid.ai` with the Pages project. The domain is pending because the apex CNAME record is not present; the current Wrangler authorization has Pages write and DNS read access, but not DNS write access.
+- Tanya is available in two complete source editions. Independent human collation is still in progress, so the corpus remains labeled beta.
+- Remaining for V1: add and collate more Tier A works; publish read-only REST and MCP access; prepare signed bulk releases and a mirror kit; and complete the public stewardship and citation documents.
+
 ## Cloudflare deployment
 
 The initial public preview uses a Cloudflare Pages Direct Upload project. The manual `Deploy to Cloudflare Pages` GitHub Actions workflow builds the static output and deploys it to that project. Before dispatching it, configure repository secrets `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` with a token that has Cloudflare Pages edit access. The custom domain `chassid.ai` still needs to be attached to the Pages project.
